@@ -67,3 +67,5 @@ Booking System: Users can book available properties by selecting dates and confi
 Payment Integration: Secure handling of payments for confirmed bookings, with status updates and history.
 
 Review System: After a stay, users can rate and review properties to enhance community trust.
+
+Admin Dashboard: Enables moderation of users, listings, and reported reviews.
