@@ -18,3 +18,52 @@ The Airbnb Clone Project is a backend simulation of a real-world booking platfor
 * Redis: Used for caching and session management.
 * Docker: Guarantees standardized development, testing, and deployment environments.
 * CI/CD Pipelines: Automated pipelines for testing and deploying code changes.
+
+# Team Roles
+* Backend Developer: Builds and maintains the server-side logic, APIs, and core features like authentication, bookings, payments, and property listings.
+* Database Administrator: Designs and manages the database structure, ensuring relationships between users, properties, bookings, and payments are well optimized.
+* DevOps Engineer: Handles deployment, monitoring, and scaling of the backend services.
+* QA Engineer: Ensures the backend functionalities are thoroughly tested and meet quality standards.
+* Project Manager: Coordinates task distribution, sets milestones, tracks progress, and ensures the project stays on schedule.
+
+# Database Design Overview
+1. User
+
+Fields: id, name, email, password, role, date_joined
+
+A user can book properties or list their own properties as a host.
+
+2. Property
+
+Fields: id, title, description, location, price, host_id
+
+A property belongs to one host and can have many bookings and reviews.
+
+3. Booking
+
+Fields: id, user_id, property_id, check_in, check_out, status
+
+A booking connects a user to a property and stores reservation details.
+
+4. Review
+
+Fields: id, user_id, property_id, rating, comment, created_at
+
+A review is written by a user about a property they booked.
+
+5. Payment
+
+Fields: id, booking_id, amount, status, payment_date
+
+A payment is linked to a booking and tracks the transaction details.
+
+# Feature Breakdown
+User Management: Handles user registration, login, profile updates, and role-based access (e.g., guest or host).
+
+Property Management: Hosts can list, edit, or remove properties. Each listing includes detailed descriptions and availability.
+
+Booking System: Users can book available properties by selecting dates and confirming availability.
+
+Payment Integration: Secure handling of payments for confirmed bookings, with status updates and history.
+
+Review System: After a stay, users can rate and review properties to enhance community trust.
