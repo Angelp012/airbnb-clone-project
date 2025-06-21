@@ -69,3 +69,23 @@ Payment Integration: Secure handling of payments for confirmed bookings, with st
 Review System: After a stay, users can rate and review properties to enhance community trust.
 
 Admin Dashboard: Enables moderation of users, listings, and reported reviews.
+
+# API Security
+* Authentication:  Makes sure only logged-in users can access protected parts of the app
+
+* Authorization: Users can only modify their own data (e.g., only a host can edit their listings).
+
+* Rate Limiting: Prevents abuse of endpoints (especially login or search) by limiting request frequency.
+
+* Input Validation & Sanitization: Protects the app from SQL injection and XSS attacks.
+
+* Secure Payments: Sensitive data like payment info is encrypted and handled via secure third-party integrations.
+
+# CI/CD Pipeline
+CI/CD refers to Continuous Integration and Continuous Deployment. It streamlines the automation of testing, building, and deploying the application every time new code is introduced.This makes development faster, reduces manual errors, and keeps the app running smoothly.
+
+Tools used include:
+* GitHub Actions: Automatically runs tests and deploys updates when changes are pushed to the repository.
+
+* Docker: Packages the app with everything it needs so it can run the same way on any server.
+
